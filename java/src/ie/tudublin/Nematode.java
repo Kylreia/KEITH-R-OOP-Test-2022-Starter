@@ -57,7 +57,7 @@ public class Nematode
         return length;
     }
 
-    public void setLimbs(int length)
+    public void setLimbs(int limbs)
     {
         this.limbs = limbs;
     }
@@ -102,6 +102,6 @@ public class Nematode
             pa.circle(x, y, 75);
         }
 
-        
+
     }
 }
