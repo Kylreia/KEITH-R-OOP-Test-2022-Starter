@@ -20,11 +20,11 @@ public class Nematode
     public Nematode(TableRow tr)
     {
         this(
-            tr.getString("Name"),
-            tr.getInt("Length"), 
-            tr.getInt("Limbs"),
-            tr.getString("Gender"),
-            tr.getInt("Eyes")
+            tr.getString("name"),
+            tr.getInt("length"), 
+            tr.getInt("limbs"),
+            tr.getString("gender"),
+            tr.getInt("eyes")
         );
     }
 
@@ -89,7 +89,19 @@ public class Nematode
 
     public void render(NematodeVisualiser pa)
     {
+        float x = 400;
+        float y = 150;
+        
+        pa.text(name, x, y);
+        pa.textAlign(PApplet.CENTER);
+        pa.textSize(18);
 
+        for(int i = 0; i < length; i++)
+        {
+            y = y + 50;
+            pa.circle(x, y, 75);
+        }
+
+        
     }
-
 }

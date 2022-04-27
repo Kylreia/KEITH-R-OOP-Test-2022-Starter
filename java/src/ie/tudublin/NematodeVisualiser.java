@@ -17,7 +17,6 @@ public class NematodeVisualiser extends PApplet
 		}		
 	}
 
-
 	public void settings()
 	{
 		size(800, 800);
@@ -28,10 +27,9 @@ public class NematodeVisualiser extends PApplet
 		colorMode(HSB);
 		background(0);
 		loadNematodes();
-		smooth();				
+		smooth();
 	}
 	
-
 	public void loadNematodes()
 	{
 		Table table = loadTable("nematodes.csv", "header");
@@ -43,9 +41,11 @@ public class NematodeVisualiser extends PApplet
 		}
 	}
 
-
 	public void draw()
 	{
-			
+		for (Nematode n:nematodes)
+		{
+			n.render(this);
+		} // code to iterate through all the Nematodes
 	}
 }
