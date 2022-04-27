@@ -96,10 +96,25 @@ public class Nematode
         pa.textAlign(PApplet.CENTER);
         pa.textSize(18);
 
-        for(int i = 0; i < length; i++)
+        if(limbs == 1)
         {
-            y = y + 50;
-            pa.circle(x, y, 75);
+            for(int i = 0; i < length; i++)
+            {
+                
+                y = y + 50;
+                pa.circle(x, y, 75);
+                pa.stroke(255);
+                pa.line(x - 70, y, x - 35, y);
+                pa.line(x + 70, y, x + 35, y);
+            }
+        }
+        else
+        {
+            for(int i = 0; i < length; i++)
+            {
+                y = y + 50;
+                pa.circle(x, y, 75);
+            } 
         }
 
 
